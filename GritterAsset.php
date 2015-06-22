@@ -7,7 +7,7 @@ use yii\web\View;
 
 /**
  * Class GritterAsset
- * @package skinka\alertGritter
+ * @package skinka\widgets\gritter
  */
 class GritterAsset extends AssetBundle
 {
