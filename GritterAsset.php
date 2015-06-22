@@ -1,6 +1,6 @@
 <?php
 
-namespace skinka\alertGritter;
+namespace skinka\widgets\gritter;
 
 use yii\web\AssetBundle;
 use yii\web\View;
