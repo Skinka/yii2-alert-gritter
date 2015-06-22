@@ -4,7 +4,7 @@ namespace skinka\gritter;
 
 class GritterAsset extends \yii\web\AssetBundle
 {
-    public $sourcePath = '@common/widgets/gritter';
+    public $sourcePath = '@vendor/skinka/gritter';
     public $css = [
         'css/gritter.css',
     ];
