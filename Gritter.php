@@ -7,7 +7,7 @@ use \yii\bootstrap\Widget;
 
 /**
  * Class AlertGritterWidget
- * @package skinka\alertGritter
+ * @package skinka\widgets\gritter
  */
 class AlertGritterWidget extends Widget {
 
