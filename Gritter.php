@@ -2,7 +2,7 @@
 
 namespace skinka\alertGritter;
 
-use skinka\alertGritter\GritterAsset;
+use skinka\widgets\gritter\GritterAsset;
 use \yii\bootstrap\Widget;
 
 /**
