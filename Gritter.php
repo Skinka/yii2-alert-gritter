@@ -1,6 +1,6 @@
 <?php
 
-namespace common\widgets\gritter;
+namespace gritter;
 
 
 use common\widgets\gritter\assets\GritterAsset;
