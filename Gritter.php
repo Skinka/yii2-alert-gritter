@@ -1,10 +1,10 @@
 <?php
-
 namespace common\widgets\gritter;
 
-
 use common\widgets\gritter\assets\GritterAsset;
-
+/**
+ * Gritter class
+ */
 class Gritter  extends \yii\bootstrap\Widget {
 
     public $gritterTypes = [
@@ -14,6 +14,7 @@ class Gritter  extends \yii\bootstrap\Widget {
         'info'    => 'gritter-info',
         'warning' => 'gritter-warning'
     ];
+    
     public $gritterIcons = [
         'error'   => 'fa fa-times',
         'danger'  => 'fa fa-times',
@@ -21,6 +22,8 @@ class Gritter  extends \yii\bootstrap\Widget {
         'info'    => 'fa fa-info',
         'warning' => 'fa fa-exclamation-triangle'
     ];
+    
+    
     public function init() {
         parent::init();
         $this->view->registerAssetBundle(GritterAsset::className());
