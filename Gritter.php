@@ -1,6 +1,6 @@
 <?php
 
-namespace skinka\alertGritter;
+namespace skinka\widgets\gritter;
 
 use skinka\widgets\gritter\GritterAsset;
 use \yii\bootstrap\Widget;
