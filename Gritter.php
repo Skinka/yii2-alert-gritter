@@ -3,8 +3,13 @@
 namespace skinka\gritter;
 
 use skinka\gritter\GritterAsset;
+use \yii\bootstrap\Widget;
 
-class Gritter extends \yii\bootstrap\Widget {
+/**
+ * Class Gritter
+ * @package skinka\gritter
+ */
+class Gritter extends Widget {
 
     public $gritterTypes = [
         'error'   => 'gritter-danger',
@@ -34,7 +39,6 @@ class Gritter extends \yii\bootstrap\Widget {
                         title: \'<i class="'.$this->gritterIcons[$type].'"></i>\',
                         text: \''.$message.'\',
                         class_name: \''.$this->gritterTypes[$type].' gritter-icon\',
-                        sticky: true,
                     });');
                 }
                 $session->removeFlash($type);

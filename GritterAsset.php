@@ -2,7 +2,14 @@
 
 namespace skinka\gritter;
 
-class GritterAsset extends \yii\web\AssetBundle
+use yii\web\AssetBundle;
+use yii\web\View;
+
+/**
+ * Class GritterAsset
+ * @package skinka\gritter
+ */
+class GritterAsset extends AssetBundle
 {
     public $sourcePath = '@vendor/skinka/gritter';
     public $css = [
@@ -12,7 +19,7 @@ class GritterAsset extends \yii\web\AssetBundle
         'js/jquery.gritter.min.js',
     ];
     public $jsOptions = [
-        'position' => \yii\web\View::POS_END
+        'position' => View::POS_END
     ];
     public $depends = [
         'yii\web\YiiAsset',
