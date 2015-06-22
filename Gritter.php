@@ -2,7 +2,6 @@
 
 namespace gritter;
 
-
 use common\widgets\gritter\assets\GritterAsset;
 
 class Gritter  extends \yii\bootstrap\Widget {
