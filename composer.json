@@ -1,5 +1,5 @@
 {
-    "name": "Skinka/yii2-alert-gritter",
+    "name": "skinka/yii2-alert-gritter",
     "type": "yii2-extension",
     "description": "Gritter. Popup messages",
     "keywords": ["Yii2","gritter","alert","messages"],
@@ -21,7 +21,7 @@
     },
     "autoload": {
 	"psr-4": {
-	    "Skinka\\yii2-alert-gritter\\": ""
+	    "skinka\\yii2-alert-gritter\\": ""
 	}
     }
 }
