@@ -1,15 +1,15 @@
 <?php
 
-namespace skinka\gritter;
+namespace skinka\alertGritter;
 
-use skinka\gritter\GritterAsset;
+use skinka\alertGritter\GritterAsset;
 use \yii\bootstrap\Widget;
 
 /**
- * Class Gritter
- * @package skinka\gritter
+ * Class AlertGritterWidget
+ * @package skinka\alertGritter
  */
-class Gritter extends Widget {
+class AlertGritterWidget extends Widget {
 
     public $gritterTypes = [
         'error'   => 'gritter-danger',

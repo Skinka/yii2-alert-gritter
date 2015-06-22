@@ -21,7 +21,7 @@
     },
     "autoload": {
 	"psr-4": {
-	    "skinka\\yii2-alert-gritter\\": ""
+	    "skinka\\alertGritter\\": ""
 	}
     }
 }

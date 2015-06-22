@@ -1,17 +1,17 @@
 <?php
 
-namespace skinka\gritter;
+namespace skinka\alertGritter;
 
 use yii\web\AssetBundle;
 use yii\web\View;
 
 /**
  * Class GritterAsset
- * @package skinka\gritter
+ * @package skinka\alertGritter
  */
 class GritterAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/skinka/gritter';
+    public $sourcePath = '@vendor/skinka/yii2-alert-gritter';
     public $css = [
         'css/gritter.css',
     ];
