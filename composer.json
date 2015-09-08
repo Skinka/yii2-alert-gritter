@@ -2,12 +2,7 @@
   "name": "skinka/yii2-alert-gritter",
   "type": "yii2-extension",
   "description": "Gritter. Popup messages",
-  "keywords": [
-    "Yii2",
-    "gritter",
-    "alert",
-    "messages"
-  ],
+  "keywords": ["Yii2", "gritter", "alert", "messages"],
   "homepage": "http://github.com/skinka/yii2-alert-gritter",
   "license": "MIT",
   "support": {
@@ -23,7 +18,9 @@
   "require": {
     "php": ">=5.4.0",
     "yiisoft/yii2": "~2.0",
-    "yiisoft/yii2-bootstrap": "*"
+    "yiisoft/yii2-bootstrap": "*",
+    "bower-asset/jquery.gritter": "*",
+    "FortAwesome/Font-Awesome": "*"
   },
   "autoload": {
     "psr-4": {
