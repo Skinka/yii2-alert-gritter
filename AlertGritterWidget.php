@@ -54,7 +54,7 @@ class AlertGritterWidget extends Widget
             if (isset($this->gritterTypes[$type])) {
                 $data = (array)$data;
                 foreach ($data as $i => $message) {
-                    $title = $this->title;
+                    $title = $this->title[$type];
                     if ($this->enableIcon) {
                         $title = Html::tag('i', '', ['class' => $this->gritterIcons[$type]]) . $title;
                     }
@@ -67,6 +67,6 @@ class AlertGritterWidget extends Widget
 
     public function registerJS($title, $text, $class_name, $image = '', $sticky = false, $options = [])
     {
-        $this->view->registerJs("gritterAdd($title, $text, $class_name, $image, $sticky, " . Json::encode($options) . ");");
+        $this->view->registerJs("gritterAdd('" . Html::encode($title) . "', '" . Html::encode($text) . "', '" . Html::encode($class_name) . "', '" . Html::encode($image) . "', " . ($sticky ? 'true' : 'false') . ", " . Json::encode($options) . ");");
     }
 }
