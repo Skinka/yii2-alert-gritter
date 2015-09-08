@@ -13,7 +13,7 @@ class GritterBowerAsset extends AssetBundle
 {
     public $sourcePath = '@bower/jquery.gritter';
     public $css = [
-        'css/gritter.css',
+        'css/jquery.gritter.css',
     ];
     public $js = [
         'js/jquery.gritter.min.js',
