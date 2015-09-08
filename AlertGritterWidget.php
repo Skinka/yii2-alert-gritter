@@ -67,6 +67,6 @@ class AlertGritterWidget extends Widget
 
     public function registerJS($title, $text, $class_name, $image = '', $sticky = false, $options = [])
     {
-        $this->view->registerJs("gritterAdd('" . Html::encode($title) . "', '" . Html::encode($text) . "', '" . Html::encode($class_name) . "', '" . Html::encode($image) . "', " . ($sticky ? 'true' : 'false') . ", " . Json::encode($options) . ");");
+        $this->view->registerJs("gritterAdd('$title', '$text', '$class_name', '$image', " . ($sticky ? 'true' : 'false') . ", " . Json::encode($options) . ");");
     }
 }
