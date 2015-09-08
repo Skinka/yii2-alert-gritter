@@ -19,8 +19,7 @@
     "php": ">=5.4.0",
     "yiisoft/yii2": "~2.0",
     "yiisoft/yii2-bootstrap": "*",
-    "bower-asset/jquery.gritter": "*",
-    "FortAwesome/Font-Awesome": "*"
+    "bower-asset/jquery.gritter": "*"
   },
   "autoload": {
     "psr-4": {
