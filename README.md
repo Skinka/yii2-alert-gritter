@@ -136,27 +136,37 @@ where
 - image = url image in block notify;
 - sticky = boolean, sticky clock;
 - options = {
+
     *(int | optional) the time you want it to be alive for before fading out*
+    
     time: '',
     
     *possibilities: bottom-left, bottom-right, top-left, top-right*
+    
     position: 'bottom-left',
     
     *how fast notifications fade in (string or int)*
+    
     fade_in_speed: 100, 
     
     *how fast the notices fade out*
+    
     fade_out_speed: 100, 
     
     *(function | optional) function called before it opens*
+    
     before_open: function(){},
     
     *(function | optional) function called after it opens*
+    
     after_open: function(e){},
     
     *(function | optional) function called before it closes*
+    
     before_close: function(e, manual_close){},
     
     *(function | optional) function called after it closes*
+    
     after_close: function(e, manual_close){},
+    
 }
