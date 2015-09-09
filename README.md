@@ -30,7 +30,7 @@ Create message:
 \Yii::$app->getSession()->setFlash('info', 'This is the message');
 ```
 Show message:
-```
+```php
 <?= skinka\widgets\gritter\AlertGritterWidget::widget() ?>
 ```
 Widget options:
@@ -117,7 +117,7 @@ Options for Jquery Gritter plugin
 ##JavaScript notify
 
 Show message:
-```
+```php
 <?php $this->registerAssetBundle(skinka\widgets\gritter\GritterAsset::className())
 <?php $this->registerJs("gritterAdd('Title', 'Text', '', '', true);"); ?>
 ```
