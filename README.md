@@ -13,7 +13,7 @@ php composer.phar require --prefer-dist skinka/yii2-alert-gritter
 or add
 
 ```
-"skinka/yii2-alert-gritter": ">=1.0.1"
+"skinka/yii2-alert-gritter": "*"
 ```
 
 to the require section of your `composer.json` file.
