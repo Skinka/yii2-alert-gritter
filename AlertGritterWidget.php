@@ -14,6 +14,11 @@ use yii\helpers\Html;
 class AlertGritterWidget extends Widget
 {
 
+    const POS_BL = 'bottom-left';
+    const POS_BR = 'bottom-right';
+    const POS_TL = 'top-left';
+    const POS_TR = 'top-right';
+
     public $gritterTypes = [
         'error' => 'gritter-danger',
         'danger' => 'gritter-danger',
@@ -38,7 +43,6 @@ class AlertGritterWidget extends Widget
         'warning' => 'Warning',
     ];
 
-    public $text = '';
     public $enableIcon = true;
     public $gritterOptions = [];
 
