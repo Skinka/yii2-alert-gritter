@@ -1,4 +1,4 @@
-#yii2-alert-gritter
+#Yii2 Alert Gritter v.1.2
 jQuery plugin a small notifications
 
 #Install
