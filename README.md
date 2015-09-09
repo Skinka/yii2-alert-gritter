@@ -31,8 +31,7 @@ Create message:
 ```
 Show message:
 ```
-<?php use skinka\widgets\gritter\AlertGritterWidget; ?>
-<?= AlertGritterWidget::widget() ?>
+<?= skinka\widgets\gritter\AlertGritterWidget::widget() ?>
 ```
 Widget options:
 
@@ -93,7 +92,7 @@ Options for Jquery Gritter plugin
     'time' => '',
     
      // possibilities: POS_BL, POS_BR, POS_TL, POS_TR
-    'position' => AlertGritterWidget::POS_BL,
+    'position' => skinka\widgets\gritter\AlertGritterWidget::POS_BL,
     
     // how fast notifications fade in (string or int)
     'fade_in_speed' => 100, 
@@ -119,8 +118,7 @@ Options for Jquery Gritter plugin
 
 Show message:
 ```
-<?php use skinka\widgets\gritter\GritterAsset; ?>
-<?php $this->registerAssetBundle(GritterAsset::className())
+<?php $this->registerAssetBundle(skinka\widgets\gritter\GritterAsset::className())
 <?php $this->registerJs("gritterAdd('Title', 'Text', '', '', true);"); ?>
 ```
 
