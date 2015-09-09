@@ -92,12 +92,12 @@ Options for Jquery Gritter plugin
 Show message:
 ```php
 <?php $this->registerAssetBundle(skinka\widgets\gritter\GritterAsset::className()); ?>
-<?php $this->registerJs("gritterAdd('Title', 'Text', '', '', true);"); ?>
+<?php $this->registerJs("gritterAdd('Title', 'Text', 'myClass');"); ?>
 ```
 
 Params of function:
 ```js
-gritterAdd(title, text, class_name, image, sticky, options);
+gritterAdd(title, text, class_name, image, options);
 ```
 where
 
@@ -105,7 +105,6 @@ where
 - text = message notify text;
 - class_name = block notify css class;
 - image = url image in block notify;
-- sticky = boolean, sticky clock;
 - options = {
     
     time: '', **(int | optional) the time you want it to be alive for before fading out**

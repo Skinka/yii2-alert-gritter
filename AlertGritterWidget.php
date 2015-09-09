@@ -128,25 +128,38 @@ class AlertGritterWidget extends Widget
      *
      * @param \yii\web\Session $session
      */
-    private function showFlashes($session)
+    protected function showFlashes($session)
     {
         $flashes = $session->getAllFlashes();
         foreach ($flashes as $type => $data) {
-            if (isset($this->options[$type])) {
+            $option = $this->getOption($type);
+            if ($option) {
                 $data = (array)$data;
                 foreach ($data as $i => $message) {
-                    $title = $this->options[$type]['title'];
-                    $class = $this->options[$type]['class'];
+                    $title = $option['title'];
+                    $class = $option['class'];
                     if ($this->enableIcon) {
-                        $title = Html::tag('i', '', ['class' => $this->options[$type]['icon']]) . $title;
+                        $title = Html::tag('i', '', ['class' => $option['icon']]) . $title;
                         $class .= ' gritter-icon';
                     }
-                    $this->registerJS($title, $message, $class, '', false, $this->gritterOptions);
+                    $this->registerJS($title, $message, $class, '', $this->gritterOptions);
                 }
                 $session->removeFlash($type);
             }
         }
     }
+
+    /**
+     * Get type option
+     *
+     * @param string $type
+     * @return array|bool
+     */
+    protected function getOption($type)
+    {
+        return isset($this->options[$type]) ? $this->options[$type] : false;
+    }
+
 
     /**
      * Init JavaScript plugin
@@ -155,11 +168,10 @@ class AlertGritterWidget extends Widget
      * @param string $text
      * @param string $class_name
      * @param string $image
-     * @param bool $sticky
      * @param array $options
      */
-    private function registerJS($title, $text, $class_name, $image = '', $sticky = false, $options = [])
+    protected function registerJS($title, $text, $class_name, $image = '', $options = [])
     {
-        $this->view->registerJs("gritterAdd('$title', '$text', '$class_name', '$image', " . ($sticky ? 'true' : 'false') . ", " . Json::encode($options) . ");");
+        $this->view->registerJs("gritterAdd('$title', '$text', '$class_name', '$image', " . Json::encode($options) . ");");
     }
 }
