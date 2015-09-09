@@ -10,7 +10,7 @@ Alert
 Notify
 ```
 <?php use skinka\widgets\gritter\GritterAsset; ?>
-<?php $this->->registerAssetBundle(GritterAsset::className())
+<?php $this->registerAssetBundle(GritterAsset::className())
 <?php $this->registerJs("gritterAdd('Title', 'Text', '', '', true);"); ?>
 ```
 
