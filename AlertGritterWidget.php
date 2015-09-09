@@ -160,7 +160,6 @@ class AlertGritterWidget extends Widget
         return isset($this->options[$type]) ? $this->options[$type] : false;
     }
 
-
     /**
      * Init JavaScript plugin
      *
