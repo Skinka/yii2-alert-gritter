@@ -13,7 +13,7 @@ php composer.phar require --prefer-dist skinka/yii2-alert-gritter
 or add
 
 ```
-"skinka/yii2-alert-gritter": ">=1.0"
+"skinka/yii2-alert-gritter": ">=1.0.1"
 ```
 
 to the require section of your `composer.json` file.
@@ -35,50 +35,23 @@ Show message:
 ```
 Widget options:
 
-The alert types configuration for the flash messages.
-This array is setup as $key => $value, where:
-- $key is the name of the session flash variable
-- $value is the bootstrap alert type (i.e. error, danger, success, info, warning)
-```php
-'gritterTypes' => [
-    'error' => 'gritter-danger',
-    'danger' => 'gritter-danger',
-    'success' => 'gritter-success',
-    'info' => 'gritter-info',
-    'warning' => 'gritter-warning'
-];
-```
-
 Enabled icons for alert message
 ```php
 'enableIcon' => true;
 ```
 
-The alert icons for the flash messages.
-This array is setup as $key => $value, where:
-- $key is the name of the session flash variable
-- $value is the css classes alert type (i.e. error, danger, success, info, warning)
+The alert types configuration for the flash messages.
+ `type` *type flash*
+- `class` *class block notify*
+- `icon` *class icon in message*
+- `title` *title type message*
 ```php
-'gritterIcons' => [
-    'error' => 'fa fa-times',
-    'danger' => 'fa fa-times',
-    'success' => 'fa fa-check',
-    'info' => 'fa fa-info',
-    'warning' => 'fa fa-exclamation-triangle'
-];
-```
-
-The alert title for the flash messages.
-This array is setup as $key => $value, where:
-- $key is the name of the session flash variable
-- $value is the text title alert type (i.e. error, danger, success, info, warning)
-```php
-'title' => [
-    'error' => 'Error',
-    'danger' => 'Danger',
-    'success' => 'Success',
-    'info' => 'Info',
-    'warning' => 'Warning',
+'options' => [
+    'error' => [
+        'class' => 'gritter-danger',
+        'icon' => 'fa fa-times',
+        'title' => 'Error',
+    ],
 ];
 ```
 
@@ -134,37 +107,21 @@ where
 - image = url image in block notify;
 - sticky = boolean, sticky clock;
 - options = {
-
-    *(int | optional) the time you want it to be alive for before fading out*
     
-    time: '',
+    time: '', **(int | optional) the time you want it to be alive for before fading out**
+        
+    position: 'bottom-left', **possibilities: bottom-left, bottom-right, top-left, top-right**
+        
+    fade_in_speed: 100, **how fast notifications fade in (string or int)**
     
-    *possibilities: bottom-left, bottom-right, top-left, top-right*
+    fade_out_speed: 100, **how fast the notices fade out**   
     
-    position: 'bottom-left',
+    before_open: function(){}, **(function | optional) function called before it opens**
     
-    *how fast notifications fade in (string or int)*
+    after_open: function(e){}, **(function | optional) function called after it opens**
     
-    fade_in_speed: 100, 
+    before_close: function(e, manual_close){}, **(function | optional) function called before it closes**
     
-    *how fast the notices fade out*
-    
-    fade_out_speed: 100, 
-    
-    *(function | optional) function called before it opens*
-    
-    before_open: function(){},
-    
-    *(function | optional) function called after it opens*
-    
-    after_open: function(e){},
-    
-    *(function | optional) function called before it closes*
-    
-    before_close: function(e, manual_close){},
-    
-    *(function | optional) function called after it closes*
-    
-    after_close: function(e, manual_close){},
+    after_close: function(e, manual_close){}, **(function | optional) function called after it closes**
     
 }
