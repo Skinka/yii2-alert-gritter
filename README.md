@@ -145,7 +145,7 @@ where
     *how fast notifications fade in (string or int)*
     fade_in_speed: 100, 
     
-    *how fast the notices fade out
+    *how fast the notices fade out*
     fade_out_speed: 100, 
     
     *(function | optional) function called before it opens*
