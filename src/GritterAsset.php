@@ -11,7 +11,7 @@ use yii\web\View;
  */
 class GritterAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/skinka/yii2-alert-gritter/assets';
+    public $sourcePath = '@vendor/skinka/yii2-alert-gritter/src/assets';
     public $js = [
         'js/alert.gritter.js',
     ];
